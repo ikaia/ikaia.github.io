@@ -32,7 +32,11 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-
+/* Remove bullets and styling for the list items */
+.labeled-icons {
+    list-style: none;
+    padding-left: 0; /* Remove padding */
+}
 ol, ul {
 	list-style: none;
 }
