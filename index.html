@@ -12,6 +12,60 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	/* Contact form */
+.contact-form {
+    max-width: 400px; /* Set the maximum width for the contact form */
+    margin: 0 auto; /* Center the form */
+    padding: 20px;
+    background-color: #f9f9f9; /* Optional: background color for the form */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Optional: soft shadow around the form */
+}
+
+.contact-form .fields {
+    margin-bottom: 20px;
+}
+
+.contact-form .field {
+    margin-bottom: 15px;
+}
+
+.contact-form .field label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form .field input,
+.contact-form .field textarea {
+    width: 100%; /* Make the inputs take full width of the form */
+    padding: 10px;
+    border-radius: 4px; /* Optional: rounded corners for inputs */
+    border: 1px solid #ccc; /* Light border */
+}
+
+.contact-form .field textarea {
+    resize: vertical; /* Allow the textarea to only resize vertically */
+}
+
+.contact-form .actions {
+    text-align: center;
+}
+
+.contact-form .actions input {
+    padding: 10px 20px;
+    background-color: #007bff; /* Button color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact-form .actions input:hover {
+    background-color: #0056b3; /* Darker blue when button is hovered */
+}
+
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -136,60 +190,46 @@
 								</article>
 							</section>
 
-						<!-- Footer -->
-							<footer>
-								<div class="pagination">
-									<!--<a href="#" class="previous">Prev</a>-->
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
-							</footer>
-
-					</div>
-
 				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
-							</section>
+<footer id="footer">
+    <section>
+        <form method="post" action="#" class="contact-form">
+            <div class="fields">
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" />
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" />
+                </div>
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="3"></textarea>
+                </div>
+            </div>
+            <ul class="actions">
+                <li><input type="submit" value="Send Message" /></li>
+            </ul>
+        </form>
+    </section>
+    <section class="split contact">
+        <section class="alt">
+            <h3>Address</h3>
+            <p>1234 Somewhere Road #87257<br />
+            Nashville, TN 00000-0000</p>
+        </section>
+        <section>
+            <h3>Phone</h3>
+            <p><a href="#">(000) 000-0000</a></p>
+        </section>
+        <section>
+            <h3>Email</h3>
+            <p><a href="#">info@untitled.tld</a></p>
+        </section>
+    </section>
+</footer>
+
 							<section>
 								<h3>Social</h3>
 								<ul class="icons alt">
