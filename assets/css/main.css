@@ -37,6 +37,21 @@ body {
     list-style: none;
     padding-left: 0; /* Remove padding */
 }
+
+
+#intro {
+    position: relative;
+    height: 100vh;  /* Full viewport height */
+    background: url('https://media.giphy.com/media/YSZ3FL6inGgcv1SyYr/giphy.gif') no-repeat center center; 
+    background-size: cover; /* Ensure the GIF covers the whole section */
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 ol, ul {
 	list-style: none;
 }
