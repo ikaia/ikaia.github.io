@@ -7,14 +7,56 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
         /* Add custom styles for the gallery and popup */
-        .gallery { display: flex; flex-wrap: wrap; gap: 20px; }
-        .gallery img { width: 100%; cursor: pointer; transition: transform 0.3s ease; }
-        .gallery img:hover { transform: scale(1.1); }
-        .popup { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 90%; background-color: white; padding: 20px; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); z-index: 9999; }
-        .popup img { width: 100%; max-height: 80vh; object-fit: contain; }
-        .popup .details { padding: 15px 0; font-size: 1.2rem; }
-        .close-popup { position: absolute; top: 10px; right: 10px; font-size: 1.5rem; cursor: pointer; }
-        .category-select { margin: 20px 0; }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+            gap: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 9999;
+        }
+        .popup img {
+            width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+        }
+        .popup .details {
+            padding: 15px 0;
+            font-size: 1.2rem;
+        }
+        .close-popup {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .category-select {
+            margin: 20px 0;
+        }
+        /* Ensure the gallery is responsive on smaller screens */
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr); /* 2 images per row on smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -60,27 +102,56 @@
 
                 <!-- Image Gallery -->
                 <div class="gallery" id="gallery">
+                    <!-- Image 1 -->
                     <div class="image" data-category="vr">
                         <img src="images/pic01.jpg" alt="VR Image 1" onclick="openPopup(this)" />
                         <div class="details">VR Image 1</div>
                     </div>
+                    <!-- Image 2 -->
                     <div class="image" data-category="photography">
                         <img src="images/pic02.jpg" alt="Photography Image 1" onclick="openPopup(this)" />
                         <div class="details">Photography Image 1</div>
                     </div>
+                    <!-- Image 3 -->
                     <div class="image" data-category="art">
                         <img src="images/pic03.jpg" alt="Art Image 1" onclick="openPopup(this)" />
                         <div class="details">Art Image 1</div>
                     </div>
+                    <!-- Image 4 -->
                     <div class="image" data-category="technology">
                         <img src="images/pic04.jpg" alt="Technology Image 1" onclick="openPopup(this)" />
                         <div class="details">Technology Image 1</div>
                     </div>
+                    <!-- Image 5 -->
                     <div class="image" data-category="design">
                         <img src="images/pic05.jpg" alt="Design Image 1" onclick="openPopup(this)" />
                         <div class="details">Design Image 1</div>
                     </div>
-                    <!-- More images can be added following the same structure -->
+                    <!-- Image 6 -->
+                    <div class="image" data-category="vr">
+                        <img src="images/pic06.jpg" alt="VR Image 2" onclick="openPopup(this)" />
+                        <div class="details">VR Image 2</div>
+                    </div>
+                    <!-- Image 7 -->
+                    <div class="image" data-category="photography">
+                        <img src="images/pic07.jpg" alt="Photography Image 2" onclick="openPopup(this)" />
+                        <div class="details">Photography Image 2</div>
+                    </div>
+                    <!-- Image 8 -->
+                    <div class="image" data-category="art">
+                        <img src="images/pic08.jpg" alt="Art Image 2" onclick="openPopup(this)" />
+                        <div class="details">Art Image 2</div>
+                    </div>
+                    <!-- Image 9 -->
+                    <div class="image" data-category="technology">
+                        <img src="images/pic09.jpg" alt="Technology Image 2" onclick="openPopup(this)" />
+                        <div class="details">Technology Image 2</div>
+                    </div>
+                    <!-- Image 10 -->
+                    <div class="image" data-category="design">
+                        <img src="images/pic10.jpg" alt="Design Image 2" onclick="openPopup(this)" />
+                        <div class="details">Design Image 2</div>
+                    </div>
                 </div>
             </section>
         </div>
