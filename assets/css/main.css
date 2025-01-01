@@ -42,7 +42,7 @@ body {
 #intro {
     position: relative;
     height: 100vh;  /* Full viewport height */
-    background: url('https://media.giphy.com/media/YSZ3FL6inGgcv1SyYr/giphy.gif') no-repeat center center; 
+    background: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2hzdGxoaWdtcXF3bnVuYjU5YW41YzZsdWxqZWwzY2N1cmJnZnRoMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/FMEzAOn1PA5leb6zOe/giphy.gif') no-repeat center center; 
     background-size: cover; /* Ensure the GIF covers the whole section */
     color: white;
     text-align: center;
