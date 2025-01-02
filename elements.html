@@ -14,6 +14,12 @@
         }
         .gallery img {
             width: 100%;
+    height: auto; /* Maintains the aspect ratio */
+    max-width: 400px; /* Optional: set max width for image */
+    max-height: 400px; /* Optional: set max height for image */
+    object-fit: cover; /* Makes sure images are cropped to fit, if needed */
+}
+
             cursor: pointer;
             transition: transform 0.3s ease;
         }
