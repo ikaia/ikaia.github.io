@@ -37,13 +37,7 @@ body {
     list-style: none;
     padding-left: 0; /* Remove padding */
 }
-.image img {
-    width: 100%; /* Makes the image responsive */
-    height: auto; /* Maintains the aspect ratio */
-    max-width: 400px; /* Optional: set max width for image */
-    max-height: 400px; /* Optional: set max height for image */
-    object-fit: cover; /* Makes sure images are cropped to fit, if needed */
-}
+
 
 ol, ul {
 	list-style: none;
