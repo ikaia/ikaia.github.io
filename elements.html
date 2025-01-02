@@ -26,9 +26,18 @@
 .gallery img:hover {
     transform: scale(1.1);
         }
-        .gallery img:hover {
-            transform: scale(1.1);
+/* Dimmed background overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 9998;
         }
+
         .popup {
             display: none;
             position: fixed;
@@ -71,8 +80,9 @@
 </head>
     
 	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <div class="overlay" id="overlay"></div> <!-- Dimmed background overlay -->
+
+    <div id="wrapper">
 
 				<!-- Header -->
 					<header id="header">
@@ -335,6 +345,7 @@
             </section>
         </div>
 
+	    
         <!-- Footer -->
         <footer id="footer">
             <section>
@@ -382,6 +393,58 @@
         // Function to close popup
         function closePopup() {
             document.getElementById('popup').style.display = 'none';
+        }
+
+        // Function to open the popup and display the overlay
+        function openPopup(image) {
+            const overlay = document.getElementById('overlay');
+            const popup = document.createElement('div');
+            popup.classList.add('popup');
+            const popupImage = document.createElement('img');
+            popupImage.src = image.src;
+            popup.appendChild(popupImage);
+
+            const closeButton = document.createElement('span');
+            closeButton.classList.add('close-popup');
+            closeButton.innerHTML = '&times;';
+            closeButton.onclick = function () {
+                closePopup(popup, overlay);
+            };
+            popup.appendChild(closeButton);
+
+            document.body.appendChild(popup);
+
+            // Show the overlay and popup
+            overlay.style.display = 'block';
+            popup.style.display = 'block';
+        }
+
+        // Function to close the popup and hide the overlay
+        function closePopup(popup, overlay) {
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+            document.body.removeChild(popup);
+        }
+
+        // Close popup when clicking outside the image
+        document.getElementById('overlay').addEventListener('click', function () {
+            const popup = document.querySelector('.popup');
+            if (popup) {
+                closePopup(popup, this);
+            }
+        });
+
+        // Function to filter images based on category selection (optional)
+        function filterImages() {
+            const category = document.getElementById('category-select').value;
+            const images = document.querySelectorAll('.image');
+            images.forEach(image => {
+                if (category === 'all' || image.getAttribute('data-category') === category) {
+                    image.style.display = 'block';
+                } else {
+                    image.style.display = 'none';
+                }
+            });
         }
     </script>
 
