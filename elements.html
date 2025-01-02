@@ -6,22 +6,25 @@
     <title>Portfolio - Massively by HTML5 UP</title>
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-        /* Add custom styles for the gallery and popup */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 4 images per row */
-            gap: 20px;
-        }
-        .gallery img {
-            width: 100%;
-    height: auto; /* Maintains the aspect ratio */
-    max-width: 400px; /* Optional: set max width for image */
-    max-height: 400px; /* Optional: set max height for image */
-    object-fit: cover; /* Makes sure images are cropped to fit, if needed */
+       /* Add custom styles for the gallery and popup */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    gap: 20px;
 }
 
-            cursor: pointer;
-            transition: transform 0.3s ease;
+.gallery img {
+    width: 100%; /* Makes image take up full width of the container */
+    height: 300px; /* Fixed height for all images */
+    object-fit: cover; /* Ensures the image fills the space without distortion */
+    max-width: 400px; /* Optional: limits maximum width */
+    max-height: 400px; /* Optional: limits maximum height */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
         }
         .gallery img:hover {
             transform: scale(1.1);
